@@ -69,6 +69,7 @@ linkSix.textContent = siteContent.nav['nav-item-6']
 let ctaH1 = document.querySelector('.cta-text');
 ctaH1.textContent = siteContent.cta.h1;
 ctaH1.style.fontFamily = 'Bangers';
+
 // try to break the lines?
 let roundImg = document.querySelector('#cta-img')
 roundImg.src = siteContent.cta['img-src']
@@ -76,15 +77,18 @@ console.log(roundImg);
 
 
 //come back to BUTTON!!
-// let ctaButton = document.getElementsByTagName('button')
-// ctaButton.textContent = siteContent.cta-text.button;
+let ctaButton = document.querySelector('.cta button')
+ctaButton.textContent = siteContent['cta'].button;
 
 
-//Update Main Content
-// let featuresSection = document.querySelector('features-h4')
-// featuresSection.textContent = siteContent.features.h4
+//Update Main Content, Top Content
+// let featuresItems = document.querySelector('.text-content')
+// featuresItems.textContent = siteContent.main-content['features-h4']
 
-
+// Update Middle Image //have also tried with # instead of . why doesnt it work?
+// let middlePhoto = document.querySelector('.middle-img')
+// middlePhoto.src = siteContent.middle-img['img-src']
+// console.log(middlePhoto);
 
 
 //Update Contact Section
