@@ -37,6 +37,10 @@ const siteContent = {
   },
 };
 
+console.log(document.URL);
+console.log(document.title);
+console.log(document.body);
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -61,3 +65,45 @@ linkFive.textContent = siteContent.nav['nav-item-5']
 let linkSix = document.getElementsByTagName('a')[5]
 linkSix.textContent = siteContent.nav['nav-item-6']
 
+// Update Dom Is Awesome and Img (aka cta section)
+let ctaH1 = document.querySelector('.cta-text');
+ctaH1.textContent = siteContent.cta.h1;
+ctaH1.style.fontFamily = 'Bangers';
+// try to break the lines?
+let roundImg = document.querySelector('#cta-img')
+roundImg.src = siteContent.cta['img-src']
+console.log(roundImg);
+
+
+//come back to BUTTON!!
+// let ctaButton = document.getElementsByTagName('button')
+// ctaButton.textContent = siteContent.cta-text.button;
+
+
+//Update Main Content
+// let featuresSection = document.querySelector('features-h4')
+// featuresSection.textContent = siteContent.features.h4
+
+
+
+
+//Update Contact Section
+let contactH4 = document.querySelector('.contact h4')
+contactH4.textContent = siteContent.contact['contact-h4']
+
+let contactItems = document.querySelectorAll('.contact p')
+contactItems[0].textContent = siteContent.contact.address
+contactItems[1].textContent = siteContent.contact.phone
+contactItems[2].textContent = siteContent.contact.email
+
+//Update footer
+let cr = document.querySelector('footer')
+cr.textContent = siteContent.footer.copyright
+
+
+
+// make nav items green
+let greenNav = document.querySelectorAll('a')
+for(let i =0; i < greenNav.length; i++){
+  greenNav[i].style.color = 'green';
+}
