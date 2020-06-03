@@ -66,9 +66,12 @@ let linkSix = document.getElementsByTagName('a')[5]
 linkSix.textContent = siteContent.nav['nav-item-6']
 
 // Update Dom Is Awesome and Img (aka cta section)
-let ctaH1 = document.querySelector('.cta-text');
+let ctaH1 = document.querySelector('.cta-text h1');
 ctaH1.textContent = siteContent.cta.h1;
 ctaH1.style.fontFamily = 'Bangers';
+
+let ctaButton = document.querySelector('.cta-text button')
+ctaButton.textContent = siteContent.cta.button
 
 // try to break the lines?
 let roundImg = document.querySelector('#cta-img')
@@ -77,17 +80,45 @@ console.log(roundImg);
 
 
 //come back to BUTTON!!
-let ctaButton = document.querySelector('.cta button')
-ctaButton.textContent = siteContent['cta'].button;
+// let ctaButton = document.querySelector('.cta-text')
+// ctaButton.textContent = siteContent['cta'].button;
 
 
 //Update Main Content, Top Content
-// let featuresItems = document.querySelector('.text-content')
-// featuresItems.textContent = siteContent.main-content['features-h4']
+let featuresHeading = document.querySelectorAll('.text-content h4')[0]
+console.log(featuresHeading[0], "here")
+featuresHeading.textContent = siteContent["main-content"]['features-h4']
+
+let featuresText = document.querySelectorAll('.text-content p')[0]
+featuresText.textContent = siteContent["main-content"]['features-content']
+
+let aboutHeading = document.querySelectorAll('.text-content h4')[1]
+aboutHeading.textContent = siteContent["main-content"]['about-h4']
+
+let aboutText = document.querySelectorAll('.text-content p')[1]
+aboutText.textContent = siteContent["main-content"]["about-content"]
+
+let servicesHeading = document.querySelectorAll('.text-content h4')[2]
+servicesHeading.textContent = siteContent["main-content"]['services-h4']
+
+let servicesText = document.querySelectorAll('.text-content p')[2]
+servicesText.textContent = siteContent["main-content"]["services-content"]
+
+let productHeading = document.querySelectorAll('.text-content h4')[3]
+productHeading.textContent = siteContent["main-content"]['product-h4']
+
+let productText = document.querySelectorAll('.text-content p')[3]
+productText.textContent = siteContent["main-content"]["product-content"]
+
+let visionHeading = document.querySelectorAll('.text-content h4')[4]
+visionHeading.textContent = siteContent["main-content"]['vision-h4']
+
+let visionText = document.querySelectorAll('.text-content p')[4]
+visionText.textContent = siteContent["main-content"]["vision-content"]
 
 // Update Middle Image //have also tried with # instead of . why doesnt it work?
-// let middlePhoto = document.querySelector('.middle-img')
-// middlePhoto.src = siteContent.middle-img['img-src']
+let middlePhoto = document.querySelector('#middle-img')
+middlePhoto.src = siteContent["main-content"]["middle-img-src"]
 // console.log(middlePhoto);
 
 
