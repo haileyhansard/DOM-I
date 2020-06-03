@@ -150,9 +150,12 @@ for(let i =0; i < greenNav.length; i++){
 let node = document.createElement('a')
 let textnode = document.createTextNode("Blog")
 node.appendChild(textnode)
-document.getElementById
+document.getElementById("nav").appendChild(node);
 
-nav.appendChild(a)
+let node2 = document.createElement('a')
+let textnode2 = document.createTextNode("Home")
+node2.appendChild(textnode2)
+document.getElementById("nav").appendChild(node2);
 
 //another way to do Main Content during Support Hours
 // const textContentH4 = document.querySelectorAll('.text-content h4')
