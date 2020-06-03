@@ -46,6 +46,12 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Update nav items
+//other way showed in Support Hours Below commented out
+//const navs = document.querySelectorAll("nav a")
+//navs[0].textContent = siteContent["nav"]["nav-item-1"]
+//navs[1].textContent = siteContent["nav"]["nav-item-2"]
+//and so on for the rest
+
 
 let linkOne = document.getElementsByTagName('a')[0]
 linkOne.textContent = siteContent.nav['nav-item-1']
@@ -77,11 +83,6 @@ ctaButton.textContent = siteContent.cta.button
 let roundImg = document.querySelector('#cta-img')
 roundImg.src = siteContent.cta['img-src']
 console.log(roundImg);
-
-
-//come back to BUTTON!!
-// let ctaButton = document.querySelector('.cta-text')
-// ctaButton.textContent = siteContent['cta'].button;
 
 
 //Update Main Content, Top Content
@@ -142,3 +143,29 @@ let greenNav = document.querySelectorAll('a')
 for(let i =0; i < greenNav.length; i++){
   greenNav[i].style.color = 'green';
 }
+
+//appendChild and prepend
+// ex: parentElement.appendChild(childElement)
+// ex: parentElement.prepend(childElement)
+let node = document.createElement('a')
+let textnode = document.createTextNode("Blog")
+node.appendChild(textnode)
+document.getElementById
+
+nav.appendChild(a)
+
+//another way to do Main Content during Support Hours
+// const textContentH4 = document.querySelectorAll('.text-content h4')
+// textContentH4[0].textContent = siteContent["main-content"]["features-h4"]
+// textContentH4[1].textContent = siteContent["main-content"]["about-h4"]
+// textContentH4[2].textContent = siteContent["main-content"]["services-h4"]
+// textContentH4[3].textContent = siteContent["main-content"]["product-h4"]
+// textContentH4[4].textContent = siteContent["main-content"]["vision-h4"]
+
+
+// const textContentP = document.querySelectorAll('.text-content p')
+// textContentP[0].textContent = siteContent["main-content"]["features-content"]
+// textContentP[1].textContent = siteContent["main-content"]["about-content"]
+// textContentP[2].textContent = siteContent["main-content"]["services-content"]
+// textContentP[3].textContent = siteContent["main-content"]["product-content"]
+// textContentP[4].textContent = siteContent["main-content"]["vision-content"]
